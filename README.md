@@ -46,7 +46,9 @@ The package is based on the following package. The project can be compatible wit
   * ES_P.csv (***saved parameter for the energy signature model***) 
   * scaler.pkl(***saved standard scaler***)
   * X_col_indice.pkl(***a dictionary that holds the corresponding index and column names***)
-  * X_test.csv(***test data set***)
+  * X_test_p1.csv(***test data set, part 1***)
+  * X_test_p2.csv(***test data set, part 2***)
+  * X_test_p3.csv(***test data set, part 3***)
   * y_test.csv(***test data set lables***)
 - pics
   * timeasdummy.png(***saved pics***)
