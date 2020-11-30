@@ -19,8 +19,13 @@ ESmodel_p = np.loadtxt('../models//ES_P.csv', delimiter=',')
 def ES_linear(x, x0, y0, k1, k2):
     return np.piecewise(x, [x < x0], [lambda x:k1*x + y0-k1*x0, lambda x:k2*x + y0-k2*x0])
 
-# reload X_test, Y_test, X_col_indice
-X_reload = np.loadtxt('../models/X_test.csv', delimiter=',')
+# reload X_test, 
+X_reload_p1 = np.loadtxt('../models/X_test_p1.csv', delimiter=',')
+X_reload_p2 = np.loadtxt('../models/X_test_p2.csv', delimiter=',')
+X_reload_p3 = np.loadtxt('../models/X_test_p3.csv', delimiter=',')
+X_reload = np.append(X_reload_p1, X_reload_p2, axis =0)
+X_reload = np.append(X_reload, X_reload_p3, axis =0)
+# reload Y_test, X_col_indice
 y_reload = np.loadtxt('../models/y_test.csv', delimiter=',')
 X_col_reload = pickle.load(open('../models/X_col_indice.pkl','rb'))
 
