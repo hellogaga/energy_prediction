@@ -1,0 +1,49 @@
+<!--
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">Energy Prediction Project</h1>
+        <p class="text-center">Predict energy demands based on time and outside temperature (℃)</p>
+        <hr />
+      
+        <div class="row">
+            <div class="col-lg-12 form-group-lg">
+                <form action="/go" method="get">
+                    <input type="text" class="form-control form-control-lg" name="query" placeholder="Enter input data to predict, eg. 2020-11-29 12:00; -2">
+                    <div class="col-lg-offset-5">
+                        <button type="submit" class="btn btn-lg btn-success">Try Prediction</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {% block message %}
+        {% endblock %}
+    </div>
+</div>
+//-->
+
+
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+    <hr />
+    <h4 class="text-center">MESSAGE</h4>
+    <p class="text-center"><i>{{query}}</i></p>
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Result</h1>
+        <ul class="list-group">
+            {% for category, classification in classification_result.items() %}
+                {% if classification == 1 %}
+                    <li class="list-group-item list-group-item-success text-center">{{category.replace('_', ' ').title()}}</li>
+                {% else %}
+                    <li class="list-group-item list-group-item-dark text-center">{{category.replace('_', ' ').title()}}</li>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

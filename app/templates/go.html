@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+    <hr />
+    <h2 class="text-center">Input:</h2>
+    <p class="text-center"><i>{{query}}</i></p>
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="text-center">Result</h1>
+        {% for id in ids %}
+            <div id="{{id}}"></div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+<script type="text/javascript">
+    const graphs = {{graphJSON | safe}};
+    const ids = {{ids | safe}};
+    for(let i in graphs) {
+        Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
+    }
+</script>
