@@ -9,7 +9,7 @@ Based on the input data, a prediction model is trained to predict heat energy de
   - [File Structure](#file-structure)
   - [How to Use the Package.](#how-to-use-the-package)
   - [Project Motivation](#project-motivation)
-  - [Results](#results)
+  - [Summary of Results of the analysis](#summary-of-results-of-the-analysis)
   - [Licensing, Authors, Acknowledgements](#licensing-authors-acknowledgements)
   
 ## Project Definition, Analysis, and Conclusion
@@ -53,6 +53,7 @@ The package is based on the following package. The project can be compatible wit
 - pics
   * timeasdummy.png(***saved pics***)
   * timeassincos.png(***saved pics***)
+  * readme_summary.png(***saved pics***)
 - Energy_prediction_training.ipynb(***jupyter notebook used to train the model***)
 - Energy_prediction_training.html(***A html copy of the jupyter notebook***)
 - README.md
@@ -71,12 +72,16 @@ The package is based on the following package. The project can be compatible wit
 ```
 **NOTE1:** The package is tested on a local machine with **Windows 10** as the operation system. Users with Linux or Mac system might have problems in the file locations. Please go to the [jupyter notebook](Energy_prediction_training.ipynb) and revise the file locations accordingly. <br /> 
 **NOTE2:** By default, the app will be rendered in a local host. In cloud-based system, such as Udacity's online workspace, revise the line as ```app.run(host='0.0.0.0', port=3001, debug=True)``` in ***run.py***. 
+<br /> 
+**NOTE3:** Due to the size of the [jupyter notebook](Energy_prediction_training.ipynb), it is not able to preview it in Github. Please make sure to download to local machine. 
 
 ## Project Motivation
 This project is the Udacity Data Science Nanodegree Capstone project. The problem originates from industry applications where a simple energy prediction is commonly used. There is great need to develop a new prediction model with better prediction accuracy. 
 
-## Results
-The main results of the project is the trained model in the 'models' folder. The main outcome of the project is a web application which can be used to predict energy demands.
+## Summary of Results of the analysis
+The main results of the project is a trained model in the 'models' folder. The main outcome of the project is a web application which can be used to predict energy demands. The following figure shows the results of trained model and commonly used 'Energy Signature Model'. Great improvement has been achieved. The RMSE value has dropped from 1805 to 481. More detailed analys can be found in the [jupyter notebook](Energy_prediction_training.ipynb). 
+
+![Trained Model vs. Existing Model](pics/readme_summary.png)
 
 ## Licensing, Authors, Acknowledgements
 The code released subjects to the MIT license. The author appreciates the code structure from [**Udacity**](https://www.udacity.com/).
